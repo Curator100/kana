@@ -60,6 +60,8 @@ function setMode(mode) {
     const { bg, music, levels } = modeConfig[mode];
 
     document.body.style.backgroundImage = `url(${bg})`;
+    document.body.style.backgroundSize = "3in 5in";
+    document.body.style.backgroundRepeat = "repeat";
     bgMusic.src = music;
     bgMusic.play();
 
@@ -87,7 +89,7 @@ function displayUserData(mode) {
     document.getElementById("user-course").textContent = userData.course;
 
     document.getElementById("exam-button").addEventListener("click", () => {
-        window.location.href = "x.com";
+        window.open("https://curator100.github.io/rugbi/", "_blank");
     });
 }
 
