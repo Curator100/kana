@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curator Mode Selector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <audio id="bgMusic" loop>
+            <source src="1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div id="login-section">
+            <h1>Welcome to Curator</h1>
+            <form id="login-form">
+                <label for="roll">Roll:</label>
+                <input type="text" id="roll" name="roll" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="mode-section" style="display: none;">
+            <h1>Select Your Mode</h1>
+            <button class="mode-button" data-mode="neutral">Neutral</button>
+            <button class="mode-button" data-mode="islamic">Islamic</button>
+            <button class="mode-button" data-mode="bts">BTS</button>
+            <button class="mode-button" data-mode="villain">Villain</button>
+        </div>
+
+        <div id="data-section" style="display: none;">
+            <h1>Welcome, <span id="user-name"></span></h1>
+            <p>Your points: <span id="user-points"></span></p>
+            <p>Your level: <span id="user-level"></span></p>
+            <div id="progress-container">
+                <label for="progress">Progress to next level:</label>
+                <progress id="progress" value="0" max="100"></progress>
+            </div>
+            <h2>Today's Task</h2>
+            <p id="user-task"></p>
+            <h2>Your Average Marks</h2>
+            <p id="user-average"></p>
+            <h2>All Students' Average Marks</h2>
+            <p id="all-average"></p>
+            <button id="exam-button">Today's Exam</button>
+            <h2 style="color: #ff4d4d;">Message from Curator</h2>
+            <p id="curator-message"></p>
+            <h2>Your Course</h2>
+            <p id="user-course"></p>
+            <div id="video-container">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <footer>
+                <p>Thank you for visiting Curator.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
